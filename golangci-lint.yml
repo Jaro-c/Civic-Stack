@@ -1,0 +1,54 @@
+run:
+  timeout: 3m
+  tests: false
+  skip-dirs:
+    - vendor
+    - web
+  skip-files:
+    - ".*_generated.go"
+
+issues:
+  exclude-use-default: false
+  max-issues-per-linter: 0
+  max-same-issues: 0
+
+linters:
+  enable:
+    # Core correctness
+    - govet
+    - errcheck
+    - staticcheck
+
+    # Code quality
+    - ineffassign
+    - unused
+    - gosimple
+
+    # Safety / bugs
+    - nilerr
+    - bodyclose
+
+    # Style (lightweight)
+    - revive
+
+  disable:
+    # Too noisy / not useful early
+    - gocyclo
+    - funlen
+    - lll
+    - dupl
+    - wsl
+
+linters-settings:
+  revive:
+    rules:
+      - name: var-naming
+      - name: blank-imports
+      - name: early-return
+      - name: empty-lines
+      - name: indent-error-flow
+      - name: superfluous-else
+
+  errcheck:
+    check-type-assertions: true
+    check-blank: true
