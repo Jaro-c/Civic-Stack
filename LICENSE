@@ -1,0 +1,114 @@
+CIVIC STACK COMMUNITY NON-COMMERCIAL LICENSE
+Version 1.0
+
+Copyright (c) 2025 Civic Stack contributors
+Official repository: https://github.com/Jaro-c/Civic-Stack
+
+
+1. Project nature
+
+Civic Stack is a public, source-available project created to be used by
+any individual or organization without restriction based on user type.
+
+The project is developed with a community-driven and collaborative
+approach and has no commercial purpose.
+
+
+2. Grant of rights
+
+Permission is hereby granted, free of charge, to:
+
+- Use the software
+- Access the source code
+- Copy it
+- Modify it
+- Create forks
+- Redistribute it
+
+Provided that all terms of this license are respected.
+
+
+3. Permitted use
+
+The software may be used freely for any purpose, provided that such use is
+non-commercial.
+
+Use is not restricted by country, sector, or type of organization. The
+only limitation is the explicit prohibition of commercial use defined in
+this license.
+
+
+4. Prohibition of commercial use
+
+The following actions are expressly prohibited:
+
+- Selling the software, in whole or in part
+- Reselling it in any form
+- Monetizing it directly or indirectly
+- Offering it as part of a paid product or service
+- Using it in SaaS, PaaS, or similar models where access is conditioned on
+  payment
+- Integrating it into commercial, proprietary, or closed-source solutions
+
+Commercial use is not permitted under this license.
+
+
+5. Forks, modifications, and copyleft
+
+Forks and modifications are permitted under the following conditions:
+
+- The source code must remain public
+- Derivative works must remain open
+- This same license must be preserved without modification
+- Relicensing under commercial or restrictive terms is not allowed
+
+
+6. Attribution
+
+Any copy or derivative work must clearly retain:
+
+- The original project name: Civic Stack
+- A link to the official repository
+- This complete license
+
+Attribution may not be removed, hidden, or altered.
+
+
+7. Donations
+
+Voluntary donations are permitted to support the development of the
+project.
+
+Donations:
+- Do not constitute a sale
+- Do not grant additional rights
+- Do not enable commercial use of the software
+
+
+8. Future licensing
+
+Only the original author of the Civic Stack project, or individuals
+explicitly designated by the author as project maintainers, may publish
+future versions of the software under different license terms.
+
+Versions already published under this license shall remain permanently
+under these same terms.
+
+
+9. Disclaimer of warranty
+
+The software is provided "AS IS", without warranty of any kind, express or
+implied.
+
+Use of the software is entirely at the user's own risk.
+
+
+10. Acceptance
+
+Use, copying, modification, or distribution of this software constitutes
+acceptance of the terms of this license.
+
+If you do not agree with these terms, do not use the software.
+
+
+END OF LICENSE
