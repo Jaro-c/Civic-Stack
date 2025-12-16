@@ -51,19 +51,45 @@ No exclusive or commercial rights are transferred to contributors.
 Maintainers may request changes before accepting a contribution.
 
 
-## Project Authority
+## Branching Model
 
-Final decisions regarding the project, including design, scope, and
-licensing, are made by the original author and designated maintainers.
+This project uses a two-branch workflow:
 
-Contributions do not grant control or authority over the project.
+- `main`: contains only stable, production-ready code
+- `develop`: integration branch for ongoing development
+
+Direct commits to `main` and `develop` are not allowed.
+All changes must be introduced through Pull Requests.
+
+
+## Forks and Pull Requests
+
+### External contributors
+
+External contributors must:
+
+1. Fork the repository
+2. Create a branch in their fork
+3. Open a Pull Request targeting the `develop` branch
+
+Pull Requests from forks targeting `main` will not be accepted.
+
+
+### Maintainers and collaborators
+
+Maintainers and approved collaborators may:
+
+- Create branches directly in the main repository
+- Open Pull Requests targeting `develop`
+
+Only maintainers are responsible for merging changes from `develop` into `main`.
 
 
 ## Commit Message Convention
 
 This project follows the Conventional Commits specification.
 
-Contributors are encouraged to use commit messages in the following format:
+Contributors are expected to use commit messages in the following format:
 
 type: short description
 
@@ -72,4 +98,46 @@ Examples:
 - feat: add initial configuration loader
 - fix: handle null configuration values
 
-This helps keep the project history clear and consistent.
+For full details, see:
+https://www.conventionalcommits.org/en/v1.0.0/
+
+
+## Branch Naming Convention
+
+Contributors are encouraged to use the following branch naming format:
+
+- `feat/<short-slug>` for new features
+- `fix/<short-slug>` for bug fixes
+- `docs/<short-slug>` for documentation
+- `chore/<short-slug>` for maintenance tasks
+- `refactor/<short-slug>` for refactoring
+- `test/<short-slug>` for test-related changes
+
+Examples:
+- feat/config-loader
+- fix/null-config-values
+- docs/update-contributing
+
+
+## Conventions Scope
+
+The conventions described in this document are intended to provide clarity
+and consistency without introducing unnecessary rigidity.
+
+- The Conventional Commits specification applies to **commit messages**
+- The Branch Naming Convention applies to **branch names**
+
+Both conventions are complementary and aim to improve collaboration,
+readability, and project maintainability.
+
+Examples are intentionally limited to keep this document concise.
+For commit messages, contributors are encouraged to consult the official
+Conventional Commits specification for full details.
+
+
+## Project Authority
+
+Final decisions regarding the project, including design, scope, and
+licensing, are made by the original author and designated maintainers.
+
+Contributions do not grant control or authority over the project.
