@@ -1,0 +1,14 @@
+version: 2
+
+updates:
+  - package-ecosystem: "gomod"
+    directory: "/control-plane"
+    schedule:
+      interval: "daily"
+    open-pull-requests-limit: 10
+
+  - package-ecosystem: "gomod"
+    directory: "/agent"
+    schedule:
+      interval: "daily"
+    open-pull-requests-limit: 10
