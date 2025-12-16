@@ -1,5 +1,5 @@
 name: Bug report
-description: Report a reproducible problem in Civic Stack
+description: Report a reproducible problem in Civic Stack (installer, modules, VPS)
 title: "[Bug]: "
 labels: ["bug"]
 assignees: []
@@ -7,15 +7,32 @@ body:
   - type: markdown
     attributes:
       value: |
-        Thank you for taking the time to report a bug.
-        Please provide as much detail as possible.
+        Thank you for reporting a bug.
+        Civic Stack targets VPS/server environments and may provision modules (nginx, databases, etc.).
+        Please include as much detail as possible and REMOVE ALL SECRETS before submitting.
 
   - type: textarea
-    id: description
+    id: summary
     attributes:
-      label: Description
+      label: Summary
       description: What happened? What did you expect to happen?
       placeholder: Clear and concise description of the issue.
+    validations:
+      required: true
+
+  - type: dropdown
+    id: phase
+    attributes:
+      label: Where did it fail?
+      description: Select the phase where the issue occurs.
+      options:
+        - Install (one-command installer)
+        - Provision (creating services like nginx/db)
+        - Configure
+        - Run (service/runtime)
+        - Upgrade
+        - Uninstall / cleanup
+        - Not sure
     validations:
       required: true
 
@@ -23,11 +40,21 @@ body:
     id: steps
     attributes:
       label: Steps to reproduce
-      description: How can we reproduce the issue?
+      description: Provide exact steps to reproduce the issue.
       placeholder: |
-        1. Go to...
-        2. Click on...
-        3. See error...
+        1. VPS provider / environment...
+        2. Run install command: ...
+        3. Select options: ...
+        4. Run: ...
+        5. Error occurs...
+    validations:
+      required: true
+
+  - type: textarea
+    id: actual
+    attributes:
+      label: Actual behavior
+      placeholder: What actually happened (include error messages).
     validations:
       required: true
 
@@ -40,21 +67,94 @@ body:
       required: false
 
   - type: textarea
-    id: environment
+    id: server_env
     attributes:
-      label: Environment
-      description: Relevant environment details.
+      label: Server environment
+      description: Required. Include OS details and basic VPS info.
       placeholder: |
-        OS:
-        Node/Bun version:
-        Browser (if applicable):
+        OS (Debian/Ubuntu + version):
+        Kernel (uname -a):
+        Architecture (amd64/arm64):
+        RAM / CPU:
+        Disk type (SSD/NVMe) and free space:
+        Virtualization (KVM/LXC/Proxmox/VMware/Other):
+        Network (IPv4/IPv6, behind NAT?):
+    validations:
+      required: true
+
+  - type: textarea
+    id: civic_stack_version
+    attributes:
+      label: Civic Stack version
+      description: Required. How did you install it and which version/commit?
+      placeholder: |
+        Install method (binary/script/source):
+        Civic Stack version/tag:
+        Commit SHA (if known):
+        Install command used:
+    validations:
+      required: true
+
+  - type: textarea
+    id: modules
+    attributes:
+      label: Enabled modules and versions
+      description: List which components were used/provisioned and their versions.
+      placeholder: |
+        - Reverse proxy: nginx (version) / caddy / traefik / none
+        - Database: postgres (version) / mysql (version) / sqlite / external
+        - TLS: letsencrypt / custom certs / behind Cloudflare / none
+        - Other modules enabled:
+    validations:
+      required: false
+
+  - type: textarea
+    id: config
+    attributes:
+      label: Relevant configuration (sanitized)
+      description: Paste only relevant snippets. Remove secrets.
+      placeholder: |
+        - civic-stack config snippet:
+        - systemd unit (if applicable):
+        - nginx site config (if applicable):
+        - env vars (sanitized):
     validations:
       required: false
 
   - type: textarea
     id: logs
     attributes:
-      label: Logs or screenshots
-      description: Add any relevant logs or screenshots.
+      label: Logs (sanitized)
+      description: Paste logs and commands output. Remove secrets.
+      placeholder: |
+        App logs:
+        systemd: journalctl -u <service> --no-pager -n 200
+        Install logs (if available):
+        nginx/db logs (if relevant):
     validations:
       required: false
+
+  - type: dropdown
+    id: reproducibility
+    attributes:
+      label: Reproducibility
+      options:
+        - Always
+        - Sometimes
+        - Rarely
+        - Only once
+        - Not sure
+    validations:
+      required: true
+
+  - type: checkboxes
+    id: checklist
+    attributes:
+      label: Checklist
+      options:
+        - label: I removed all secrets (tokens, passwords, private keys) from this report.
+          required: true
+        - label: I searched existing issues to avoid duplicates.
+          required: false
+        - label: I can provide additional logs if needed.
+          required: false
