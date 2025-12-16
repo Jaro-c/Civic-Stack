@@ -1,0 +1,50 @@
+# EditorConfig is awesome: https://editorconfig.org
+root = true
+
+[*]
+charset = utf-8
+end_of_line = lf
+insert_final_newline = true
+trim_trailing_whitespace = true
+
+# Go code: use tabs (Go standard)
+[*.go]
+indent_style = tab
+indent_size = 4
+
+# Shell scripts
+[*.sh]
+indent_style = space
+indent_size = 4
+
+# YAML / TOML / config files
+[*.yml]
+indent_style = space
+indent_size = 4
+
+[*.yaml]
+indent_style = space
+indent_size = 4
+
+[*.toml]
+indent_style = space
+indent_size = 4
+
+# Markdown
+[*.md]
+indent_style = space
+indent_size = 4
+trim_trailing_whitespace = false
+
+# Web files (if any)
+[*.html]
+indent_style = space
+indent_size = 4
+
+[*.css]
+indent_style = space
+indent_size = 4
+
+[*.js]
+indent_style = space
+indent_size = 4
