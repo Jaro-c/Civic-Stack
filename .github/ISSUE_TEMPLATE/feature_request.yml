@@ -1,0 +1,91 @@
+name: Feature request
+description: Propose a new feature or improvement for Civic Stack
+title: "[Feature]: "
+labels: ["enhancement"]
+assignees: []
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thank you for proposing a feature.
+        Civic Stack targets VPS and server environments. Please describe the use case clearly.
+
+  - type: textarea
+    id: summary
+    attributes:
+      label: Summary
+      description: Briefly describe the feature or improvement.
+      placeholder: Clear and concise description of the proposal.
+    validations:
+      required: true
+
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem to solve
+      description: What problem or limitation does this feature address?
+      placeholder: Describe the current limitation or pain point.
+    validations:
+      required: true
+
+  - type: textarea
+    id: solution
+    attributes:
+      label: Proposed solution
+      description: How should this feature work?
+      placeholder: Describe the proposed behavior or design.
+    validations:
+      required: true
+
+  - type: textarea
+    id: scope
+    attributes:
+      label: Scope / affected areas
+      description: Which parts of the system would be affected?
+      placeholder: |
+        - Installer
+        - Core runtime
+        - Module provisioning
+        - Networking / firewall
+        - systemd integration
+        - Documentation
+    validations:
+      required: false
+
+  - type: textarea
+    id: compatibility
+    attributes:
+      label: Compatibility considerations
+      description: OS, versions, or backward compatibility concerns.
+      placeholder: |
+        Target OS (Debian/Ubuntu/etc):
+        Minimum versions:
+        Backward compatibility concerns:
+    validations:
+      required: false
+
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternatives considered
+      description: Any alternative approaches or existing solutions?
+    validations:
+      required: false
+
+  - type: textarea
+    id: context
+    attributes:
+      label: Additional context
+      description: Links, references, or examples.
+    validations:
+      required: false
+
+  - type: checkboxes
+    id: checklist
+    attributes:
+      label: Checklist
+      options:
+        - label: This feature aligns with the project scope and goals.
+          required: true
+        - label: I understand this is a proposal and may not be accepted.
+          required: true
