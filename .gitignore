@@ -1,0 +1,68 @@
+# =========================
+# Go
+# =========================
+# Binaries
+*.exe
+*.exe~
+*.dll
+*.so
+*.dylib
+
+# Test binaries
+*.test
+
+# Coverage / profiling
+*.out
+*.coverprofile
+*.prof
+
+# Go workspace (autogenerado)
+go.work.sum
+
+# Vendor (solo si no lo versionas)
+vendor/
+
+# =========================
+# Build / dist
+# =========================
+bin/
+dist/
+build/
+out/
+
+# =========================
+# IDEs / Editors
+# =========================
+# VS Code
+.vscode/
+!.vscode/extensions.json
+
+# JetBrains
+.idea/
+*.iml
+
+# =========================
+# OS
+# =========================
+.DS_Store
+Thumbs.db
+
+# =========================
+# Logs / runtime
+# =========================
+*.log
+logs/
+
+# =========================
+# Environment / secrets
+# =========================
+.env
+.env.*
+!.env.example
+
+# =========================
+# Temporary files
+# =========================
+tmp/
+temp/
+*.tmp
